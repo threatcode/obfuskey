@@ -1,6 +1,11 @@
+## Copyright (C) 2020 - 2025 ENCRYPTED SUPPORT LLC <coderxcard@gmail.com>
+## See the file COPYING for copying conditions.
+
 ## Manually maintained file. nogenmkfile
 
-etc/*
-lib/*
 eventcap usr/sbin/
 obfuskey usr/sbin/
+
+etc/*
+usr/*
+lib/*

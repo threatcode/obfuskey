@@ -1,4 +1,10 @@
-version_numbers_by_upstream=true
+#!/bin/bash
+
+## Copyright (C) 2016 - 2025 ENCRYPTED SUPPORT LLC <coderxcard@gmail.com>
+## See the file COPYING for copying conditions.
+
+## Fork.
+#version_numbers_by_upstream=true
 
 ## Already included upstream.
 genmkfile_lintian_post_opts+=" --suppress-tags maintainer-manual-page"
