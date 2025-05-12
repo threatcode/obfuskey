@@ -1,0 +1,6 @@
+## Manually maintained file. nogenmkfile
+
+etc/*
+lib/*
+eventcap usr/sbin/
+obfuskey usr/sbin/
