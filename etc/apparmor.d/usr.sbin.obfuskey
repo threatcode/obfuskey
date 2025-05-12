@@ -1,0 +1,27 @@
+# Last Modified: Sun Jul  9 12:23:04 2023
+include <tunables/global>
+
+/usr/sbin/obfuskey {
+  include <local/usr.sbin.obfuskey>
+
+  ## Required for 'obfuskey -v' (verbose) only.
+  network unix stream,
+
+  signal receive set=cont peer=unconfined,
+  signal receive set=exists peer=unconfined,
+  signal receive set=kill peer=unconfined,
+  signal receive set=term peer=unconfined,
+
+  ptrace readby,
+
+  /etc/ld.so.cache r,
+  /etc/ld.so.preload r,
+  /usr/sbin/obfuskey mr,
+  /{,usr/}lib{,32,64}/** mr,
+  owner /dev/input/event* r,
+  owner /dev/uinput rw,
+  owner /sys/devices/virtual/input/** r,
+
+  # Site-specific additions and overrides. See local/README for details.
+  #include <local/usr.sbin.obfuskey>
+}
